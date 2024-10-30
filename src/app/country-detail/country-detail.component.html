@@ -1,0 +1,36 @@
+<div class="container mt-5">
+  <div *ngIf="countryDetail" class="card p-4">
+    <h2 class="text-center">{{ countryDetail.name.official }}</h2>
+    
+    <div class="row mt-3" style="margin-left: 200px;">
+      <div class="col-md-6" >
+        <p><strong>Region:</strong> {{ countryDetail.region }}</p>
+        <p><strong>Subregion:</strong> {{ countryDetail.subregion }}</p>
+        <p><strong>Area:</strong> {{ countryDetail.area | number }} km²</p>
+        <p><strong>Population:</strong> {{ countryDetail.population | number }}</p>
+      </div>
+      <div class="col-md-6">
+        <p><strong>Currency:</strong> 
+          <span *ngFor="let currency of currencyNames(); let last = last">
+            {{ currency }}<span *ngIf="!last">, </span>
+          </span>
+        </p>
+        <p><strong>Time Zones:</strong> 
+          <span *ngFor="let timezone of countryDetail.timezones; let last = last">
+            {{ timezone }}<span *ngIf="!last">, </span>
+          </span>
+        </p>
+        <p><strong>Google Maps:</strong> 
+          <a [href]="countryDetail.maps.googleMaps" target="_blank" style="color: rgb(199, 199, 225);">View on Map</a>
+        </p>
+      </div>
+    </div>
+  </div>
+  
+  <button class="btn-oval mb-3" (click)="goBack()">Back</button>
+
+  <div *ngIf="!countryDetail" class="alert alert-danger text-center">
+    <p>Country details not found.</p>
+  </div>
+</div>
+

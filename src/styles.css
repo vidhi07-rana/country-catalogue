@@ -1,0 +1,16 @@
+/* Global Styles */
+html, body {
+    height: 100%; 
+    margin: 0; 
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: black; 
+    background-image: url('https://getwallpapers.com/wallpaper/full/a/c/d/788073-world-map-desktop-wallpaper-1920x1200-photos.jpg'); /* Background image */
+    background-size: cover; 
+    background-position: center;
+    background-repeat: repeat; 
+    background-attachment: fixed; 
+}
+

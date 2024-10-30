@@ -1,0 +1,109 @@
+/* Base Styles */
+.container {
+  max-width: 600px; 
+  margin: 50px auto; 
+  padding: 50px; 
+  background-color: rgba(240, 248, 255, 0.2); 
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px); 
+  border: 1px solid rgba(255, 255, 255, 0.2); 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center;
+  justify-content: center; 
+  height: auto;
+}
+
+
+
+
+/* Card Styles */
+.card {
+  width: 100%; /* Full width of container */
+  max-width: 800px; /* Limit max width */
+}
+
+/* Button Styles */
+.btn {
+  padding: 10px 20px; /* Add padding for button */
+  font-size: 1.2rem; /* Increase font size */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s, transform 0.3s; /* Animation effects */
+}
+
+.btn:hover {
+  background-color: #0056b3; /* Darker background on hover */
+  transform: translateY(-2px); /* Lift effect */
+}
+
+/* Other styles remain the same */
+/* Header */
+.heading {
+  font-size: 6rem;
+  color: rgb(38, 38, 46);
+  background: transparent;
+  border-bottom: 2px solid rgba(125, 125, 239, 0.6);
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* Utility Classes */
+.text-center {
+  text-align: center;
+}
+
+.mb-3 {
+  margin-bottom: 1rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .heading {
+    font-size: 2.5rem;
+  }
+
+  .form-control {
+    font-size: 1.2rem;
+    width: 70%;
+  }
+
+  .table th, .table td {
+    padding: 10px;
+    font-size: 1rem;
+  }
+}
+/* Oval Button Styles */
+.btn-oval {
+  display: inline-block; /* Ensures the button behaves like a block element */
+  padding: 12px 30px; /* Adjust padding for better proportions */
+  font-size: 1.1rem; /* Increase font size for better readability */
+  color: #ffffff; /* Text color */
+  background-color: #0e1d2e; /* Primary background color */
+  border: none; /* Remove border */
+  border-radius: 50px; /* Rounded edges for oval shape */
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2); /* Subtle shadow for depth */
+  transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s; /* Smooth transition effects */
+}
+
+/* Hover Effects */
+.btn-oval:hover {
+  background-color: #30363d; /* Darker shade on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Increase shadow on hover */
+  transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* Active State */
+.btn-oval:active {
+  background-color: #004494; /* Even darker shade on active */
+  transform: translateY(1px); /* Slight dip effect */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Normal shadow on active */
+}
+
+/* Disabled State */
+.btn-oval:disabled {
+  background-color: #d6d6d6; /* Light gray background */
+  color: #a1a1a1; /* Darker gray text */
+  box-shadow: none; /* No shadow */
+  cursor: not-allowed; /* Change cursor */
+}
